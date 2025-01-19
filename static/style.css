@@ -1,0 +1,170 @@
+/* Global Styles */
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/free-vector/abstract-background-with-wavy-shapes_23-2148534078.jpg?t=st=1736456925~exp=1736460525~hmac=0085f5947b45557df46394068f520c34645d89e51f7ea73a7718dfe390735289&w=1800') no-repeat center center fixed; 
+    background-size: cover;  /* Ensures the background covers the entire viewport */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Main result container */
+.result-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    max-width: 750px;
+    width: 90%;
+    transition: transform 0.5s ease-out;
+    animation: slideIn 1s ease-out;
+}
+
+.result-container:hover {
+    transform: translateY(-10px); /* Hover effect for smooth lift */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Image result section */
+.image-result {
+    margin-bottom: 30px;
+}
+
+.image-result h2 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-result h2:hover {
+    transform: scale(1.05); /* 3D hover effect */
+}
+
+/* Classification result styling */
+.image-result p {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFCC00; /* Bright and vibrant color */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.image-result p:hover {
+    transform: scale(1.1); /* 3D hover effect for the classification result */
+}
+
+/* Icon styling */
+.icon img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon img:hover {
+    transform: scale(1.1); /* Zoom effect for the icon */
+}
+
+/* Recommendation message styling */
+.recommendation {
+    margin-top: 20px;
+    font-size: 1.8em;
+    font-weight: normal;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/* Back button styling */
+.back-button a button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 250px;
+    margin-top: 30px;
+}
+
+.back-button a button:hover {
+    background-color: #FF6A00;
+    transform: translateY(-5px); /* Hover lift effect */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 3D fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-in effect for the container */
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .result-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .image-result h2 {
+        font-size: 2em;
+    }
+
+    .image-result p {
+        font-size: 2em;
+    }
+
+    .recommendation {
+        font-size: 1.5em;
+    }
+
+    .back-button a button {
+        font-size: 1.3em;
+        padding: 12px 25px;
+    }
+}
+
+

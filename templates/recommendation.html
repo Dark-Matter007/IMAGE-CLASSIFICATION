@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Classification Result</h1>
+        
+        <!-- Image result section -->
+        <div class="image-result">
+            <h2>Your image has been classified as:</h2>
+            <p><strong>{{ class_name }}</strong></p>
+        </div>
+
+        <!-- Icon for category -->
+        <div class="icon">
+            <img src="static/icons/{{ class_name }}.png" alt="{{ class_name }} icon">
+        </div>
+
+        <!-- Recommendation message -->
+        <div class="recommendation">
+            <p>Based on this image, we recommend you explore similar images in the <strong>{{ class_name }}</strong> category!</p>
+        </div>
+
+        <!-- Back button -->
+        <div class="back-button">
+            <a href="{{ url_for('index') }}">
+                <button>Back to Classify Another Image</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

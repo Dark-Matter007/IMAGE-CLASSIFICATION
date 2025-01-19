@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2023/12/qddqdw-1703555949.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Gradient background effect */
+.container {
+    text-align: center;
+    margin-top: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(0, 0, 0, 0.6);
+    }
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Form styles */
+form {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: translateY(-10px);
+}
+
+/* Input and button styles */
+input[type="file"] {
+    padding: 12px 20px;
+    border: 2px solid #42a5f5;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+input[type="file"]:hover {
+    background: #42a5f5;
+    transform: scale(1.05);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.4em;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #42a5f5, #56ccf2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 3D Button Effect */
+button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    .container {
+        margin-top: 20px;
+    }
+    form {
+        width: 80%;
+    }
+    input[type="file"], button {
+        width: 100%;
+    }
+}
+
+/* Footer (optional) */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
